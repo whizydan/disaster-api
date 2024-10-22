@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
+
 const HighRiskArea = sequelize.define('HighRiskArea', {
   area_id: {
     type: DataTypes.INTEGER,

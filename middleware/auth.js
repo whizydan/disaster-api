@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 
+
 // Middleware to check for JWT in the HTTP-only cookie
 const authMiddleware = (req, res, next) => {
   try {

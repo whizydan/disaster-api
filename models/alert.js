@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
+
 const Alert = sequelize.define('Alert', {
   alert_id: {
     type: DataTypes.INTEGER,

@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
+
 const SafeRoute = sequelize.define('SafeRoute', {
   route_id: {
     type: DataTypes.INTEGER,
