@@ -11,7 +11,7 @@ const { getAllReports, getReportById, createReport, updateReport, deleteReport }
 
 /**
  * @swagger
- * /api/community-reports:
+ * /community-reports:
  *   get:
  *     summary: Get all community reports
  *     tags: [CommunityReports]
@@ -48,7 +48,7 @@ router.get('/', getAllReports);
 
 /**
  * @swagger
- * /api/community-reports/{id}:
+ * /community-reports/{id}:
  *   get:
  *     summary: Get a community report by ID
  *     tags: [CommunityReports]
@@ -69,7 +69,7 @@ router.get('/:id', getReportById);
 
 /**
  * @swagger
- * /api/community-reports:
+ * /community-reports:
  *   post:
  *     summary: Create a new community report
  *     tags: [CommunityReports]
@@ -113,7 +113,7 @@ router.post('/', createReport);
 
 /**
  * @swagger
- * /api/community-reports/{id}:
+ * /community-reports/{id}:
  *   put:
  *     summary: Update a community report by ID
  *     tags: [CommunityReports]
@@ -158,7 +158,7 @@ router.put('/:id', updateReport);
 
 /**
  * @swagger
- * /api/community-reports/{id}:
+ * /community-reports/{id}:
  *   delete:
  *     summary: Delete a community report by ID
  *     tags: [CommunityReports]

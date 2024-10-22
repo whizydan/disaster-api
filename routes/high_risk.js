@@ -11,7 +11,7 @@ const { getAllHighRiskAreas, getHighRiskAreaById, createHighRiskArea, updateHigh
 
 /**
  * @swagger
- * /api/high-risk-areas:
+ * /high-risk-areas:
  *   get:
  *     summary: Get all high-risk areas
  *     tags: [HighRiskAreas]
@@ -42,7 +42,7 @@ router.get('/', getAllHighRiskAreas);
 
 /**
  * @swagger
- * /api/high-risk-areas/{id}:
+ * /high-risk-areas/{id}:
  *   get:
  *     summary: Get a high-risk area by ID
  *     tags: [HighRiskAreas]
@@ -63,7 +63,7 @@ router.get('/:id', getHighRiskAreaById);
 
 /**
  * @swagger
- * /api/high-risk-areas:
+ * /high-risk-areas:
  *   post:
  *     summary: Create a new high-risk area
  *     tags: [HighRiskAreas]
@@ -95,7 +95,7 @@ router.post('/', createHighRiskArea);
 
 /**
  * @swagger
- * /api/high-risk-areas/{id}:
+ * /high-risk-areas/{id}:
  *   put:
  *     summary: Update a high-risk area by ID
  *     tags: [HighRiskAreas]
@@ -132,7 +132,7 @@ router.put('/:id', updateHighRiskArea);
 
 /**
  * @swagger
- * /api/high-risk-areas/{id}:
+ * /high-risk-areas/{id}:
  *   delete:
  *     summary: Delete a high-risk area by ID
  *     tags: [HighRiskAreas]

@@ -46,10 +46,10 @@ sequelize.sync({ force: false }).then(() => {
 app.use('/users', authMiddleware, userRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.use('/auth', authRouter);
-app.use('/alert', alertRouter);
-app.use('/community-reports', communityController);
-app.use('/high-risk-areas', highRiskController);
-app.use('/safe-routes', safeRoutesRouter);
+app.use('/', alertRouter);
+app.use('/', communityController);
+app.use('/', highRiskController);
+app.use('/', safeRoutesRouter);
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');

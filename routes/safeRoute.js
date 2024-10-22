@@ -11,7 +11,7 @@ const { getAllSafeRoutes, getSafeRouteById, createSafeRoute, updateSafeRoute, de
 
 /**
  * @swagger
- * /api/safe-routes:
+ * /safe-routes:
  *   get:
  *     summary: Get all safe routes
  *     tags: [SafeRoutes]
@@ -42,7 +42,7 @@ router.get('/', getAllSafeRoutes);
 
 /**
  * @swagger
- * /api/safe-routes/{id}:
+ * /safe-routes/{id}:
  *   get:
  *     summary: Get a safe route by ID
  *     tags: [SafeRoutes]
@@ -63,7 +63,7 @@ router.get('/:id', getSafeRouteById);
 
 /**
  * @swagger
- * /api/safe-routes:
+ * /safe-routes:
  *   post:
  *     summary: Create a new safe route
  *     tags: [SafeRoutes]
@@ -96,7 +96,7 @@ router.post('/', createSafeRoute);
 
 /**
  * @swagger
- * /api/safe-routes/{id}:
+ * /safe-routes/{id}:
  *   put:
  *     summary: Update a safe route by ID
  *     tags: [SafeRoutes]
@@ -133,7 +133,7 @@ router.put('/:id', updateSafeRoute);
 
 /**
  * @swagger
- * /api/safe-routes/{id}:
+ * /safe-routes/{id}:
  *   delete:
  *     summary: Delete a safe route by ID
  *     tags: [SafeRoutes]

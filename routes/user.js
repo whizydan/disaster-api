@@ -12,7 +12,7 @@ const authMiddleware = require('../middleware/auth');
 
 /**
  * @swagger
- * /users:
+ * /:
  *   get:
  *     summary: Get all users
  *     tags: [Users]
@@ -47,7 +47,7 @@ router.get('/', authMiddleware, getAllUsers);
 
 /**
  * @swagger
- * /users/{id}:
+ * /{id}:
  *   get:
  *     summary: Get a user by ID
  *     tags: [Users]
@@ -85,7 +85,7 @@ router.get('/:id', authMiddleware, getUserById);
 
 /**
  * @swagger
- * /users:
+ * /:
  *   post:
  *     summary: Create a new user
  *     tags: [Users]
@@ -124,7 +124,7 @@ router.post('/', authMiddleware, createUser);
 
 /**
  * @swagger
- * /users/{id}:
+ * /{id}:
  *   put:
  *     summary: Update a user by ID
  *     tags: [Users]
@@ -162,7 +162,7 @@ router.put('/:id', authMiddleware, updateUser);
 
 /**
  * @swagger
- * /users/{id}:
+ * /{id}:
  *   delete:
  *     summary: Delete a user by ID
  *     tags: [Users]

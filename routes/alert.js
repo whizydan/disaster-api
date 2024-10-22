@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { getAllAlerts, getAlertById, createAlert, updateAlert, deleteAlert } = require('../controllers/alertController');
+const authMiddleware = require('../middleware/auth');
 
 /**
  * @swagger
