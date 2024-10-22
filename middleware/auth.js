@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const authMiddleware = (req, res, next) => {
   try {
     // Retrieve the token from the HTTP-only cookie
-    const token = req.cookies?.jwt;
+    const token = req.cookies?.token;
 
     // If no token, return unauthorized error
     if (!token) {

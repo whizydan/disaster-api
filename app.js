@@ -11,6 +11,11 @@ const authMiddleware = require('./middleware/auth');
 
 const app = express();
 const userRoutes = require('./routes/user');
+const authRouter = require('./routes/auth');
+const alertRouter = require('./routes/alert');
+const communityController = require('./routes/community');
+const highRiskController = require('./routes/high_risk');
+const safeRoutesRouter = require('./routes/safeRoute');
 
 app.use(express.json());
 app.use(cookieParser());
@@ -38,8 +43,13 @@ sequelize.sync({ force: false }).then(() => {
 });
 
 // Define routes and controllers here...
-app.use('/users', userRoutes);
+app.use('/users', authMiddleware, userRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use('/auth', authRouter);
+app.use('/alert', alertRouter);
+app.use('/community-reports', communityController);
+app.use('/high-risk-areas', highRiskController);
+app.use('/safe-routes', safeRoutesRouter);
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
