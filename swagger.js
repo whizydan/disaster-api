@@ -12,7 +12,7 @@ const swaggerOptions = {
     servers: [
       {
         url: 'http://localhost:3000',
-      },
+      },{url: 'http://kerberos.co.ke'},
     ],
     components: {
       securitySchemes: {
