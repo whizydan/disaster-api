@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(cors({
-  origin: 'localhost', // Your frontend domain
+  origin: '*', // Your frontend domain
   credentials: true // Allow cookies to be sent with the requests
 }));
 
