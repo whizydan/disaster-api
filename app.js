@@ -21,10 +21,10 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false }));
-app.use(cors({
-  origin: 'localhost', // Your frontend domain
-  credentials: true // Allow cookies to be sent with the requests
-}));
+// app.use(cors({
+//   origin: 'localhost', // Your frontend domain
+//   credentials: true // Allow cookies to be sent with the requests
+// }));
 
 if (!fs.existsSync('uploads')) {
   fs.mkdirSync('uploads');
@@ -46,10 +46,10 @@ sequelize.sync({ force: false }).then(() => {
 app.use('/users', authMiddleware, userRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.use('/auth', authRouter);
-app.use('/', alertRouter);
-app.use('/', communityController);
-app.use('/', highRiskController);
-app.use('/', safeRoutesRouter);
+app.use('/alerts', alertRouter);
+app.use('/community-reports', communityController);
+app.use('/high-risk-areas', highRiskController);
+app.use('/safe-routes', safeRoutesRouter);
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
